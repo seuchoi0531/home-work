@@ -5,28 +5,22 @@ body {
     background-color: #fff;
 }
 
-table, tr, td {
-    margin: 0;
-    padding: 0;
-    border-collapse: collapse;
-    border: 0;
-}
-
 .box {
     border:1px solid #000;
     padding: 100px;
 }
 
 .firend-list {
-    margin-inline: auto;
+    padding: 0;
 }
 
-.profile-frame>.friend-state {
-    display: inline-block;
+.profile-frame {
     position: relative;
     padding: 10px;
     width: 64px;
     height: 64px;
+    list-style-type: none;
+    display: inline-block;
 }
 
 .round-profile {

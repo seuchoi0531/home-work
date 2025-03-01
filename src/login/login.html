@@ -12,73 +12,106 @@
     <link rel="stylesheet" href="./styles/login.css" />
   </head>
   <body>
+    <h1 class="sr-only">네이버 로그인</h1>
     <section class="wrap">
       <header class="logo-wrap">
         <figure class="logo">
-          <svg
-            width="230"
-            height="44"
-            viewBox="0 0 230 44"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M30.0764 23.5394L13.6301 0H0V43.9824H14.279V20.443L30.7252 43.9824H44.3554V0H30.0764V23.5394Z"
-              fill="#03CF5D"
-            />
-            <path
-              d="M66.2086 0L48.8973 43.9824H63.6132L65.701 38.1767H82.2929L84.3851 44H99.0967L81.7853 0.0175967L66.2086 0ZM69.0644 27.5946L73.9992 13.8545L78.9295 27.5946H69.0644Z"
-              fill="#03CF5D"
-            />
-            <path
-              d="M116.624 28.9184L106.234 0H91.5224L108.834 43.9824H124.41L141.722 0H127.006L116.624 28.9184Z"
-              fill="#03CF5D"
-            />
-            <path
-              d="M160.326 27.2735H180.449V16.7089H160.326V10.7801H180.666V0H146.264V43.9824H181.098V33.2023H160.326V27.2735Z"
-              fill="#03CF5D"
-            />
-            <path
-              d="M218.842 28.8921L220.166 28.3335C225.295 26.1959 227.903 21.5646 227.903 15.6885C227.903 10.1335 225.869 6.0124 221.861 3.47461C218.131 1.10396 213.298 0 206.642 0H188.024V43.9824H201.87V31.6937H206.849L215.284 43.9824H230L218.842 28.8921ZM209.228 20.4826H201.654V11.2111H209.228C210.462 11.2111 211.645 11.6995 212.518 12.5689C213.39 13.4383 213.88 14.6174 213.88 15.8469C213.88 17.0763 213.39 18.2555 212.518 19.1248C211.645 19.9942 210.462 20.4826 209.228 20.4826V20.4826Z"
-              fill="#03CF5D"
-            />
-          </svg>
-          <figcaption>naver 로고</figcaption>
+          <a href="https://www.naver.com" class="logo-link">
+            <svg
+              width="230"
+              height="44"
+              viewBox="0 0 230 44"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M30.0764 23.5394L13.6301 0H0V43.9824H14.279V20.443L30.7252 43.9824H44.3554V0H30.0764V23.5394Z"
+                fill="#03CF5D"
+              />
+              <path
+                d="M66.2086 0L48.8973 43.9824H63.6132L65.701 38.1767H82.2929L84.3851 44H99.0967L81.7853 0.0175967L66.2086 0ZM69.0644 27.5946L73.9992 13.8545L78.9295 27.5946H69.0644Z"
+                fill="#03CF5D"
+              />
+              <path
+                d="M116.624 28.9184L106.234 0H91.5224L108.834 43.9824H124.41L141.722 0H127.006L116.624 28.9184Z"
+                fill="#03CF5D"
+              />
+              <path
+                d="M160.326 27.2735H180.449V16.7089H160.326V10.7801H180.666V0H146.264V43.9824H181.098V33.2023H160.326V27.2735Z"
+                fill="#03CF5D"
+              />
+              <path
+                d="M218.842 28.8921L220.166 28.3335C225.295 26.1959 227.903 21.5646 227.903 15.6885C227.903 10.1335 225.869 6.0124 221.861 3.47461C218.131 1.10396 213.298 0 206.642 0H188.024V43.9824H201.87V31.6937H206.849L215.284 43.9824H230L218.842 28.8921ZM209.228 20.4826H201.654V11.2111H209.228C210.462 11.2111 211.645 11.6995 212.518 12.5689C213.39 13.4383 213.88 14.6174 213.88 15.8469C213.88 17.0763 213.39 18.2555 212.518 19.1248C211.645 19.9942 210.462 20.4826 209.228 20.4826V20.4826Z"
+                fill="#03CF5D"
+              />
+            </svg>
+          </a>
+          <figcaption class="sr-only">naver 로고</figcaption>
         </figure>
       </header>
       <main class="form-wrap">
-        <form action="/">
-          <div class="email-wrap">
+        <form action="/" class="login-form">
+          <div class="email-component email-wrap">
+            <label for="email" class="sr-only">아이디(이메일)</label>
             <input
               type="email"
               id="email"
               class="email"
-              placeholder="아이디"
+              placeholder="아이디(이메일)"
+              name="email"
               required
             />
-            <label for="email"></label>
+            <div class="email-error">아이디는 이메일을 입력해 주세요</div>
           </div>
-          <div class="password-wrap">
+          <div class="password-component password-wrap">
+            <label for="password" class="sr-only">비밀번호</label>
             <input
               type="password"
               id="password"
               class="password"
+              name="password"
               placeholder="비밀번호"
+              minlength="10"
               required
             />
-            <label for="password"></label>
+            <div class="password-error">
+              비밀번호는 10자리 이상 입력해 주세요
+            </div>
           </div>
-          <div class="button-wrap">
+          <div class="login-button-component login-button-wrap">
             <button type="submit" class="login-button">로그인</button>
           </div>
           <div class="checkbox-wrap">
-            <input type="checkbox" id="login-yuji" class="login-yuji" />
-            <label for="login-yuji" class="login-yuji-label"
-              >로그인 상태 유지</label
-            >
-            <a href="./pages/ip_security.html" class="ipboan"
-              >IP보안<span class="toggle">OFF</span></a
-            >
+            <div class="stay-login-component stay-login-wrap">
+              <input
+                type="checkbox"
+                id="stay-login"
+                class="stay-login"
+                name="stay-login"
+              />
+              <label for="stay-login" class="stay-login-label"
+                >로그인 상태 유지</label
+              >
+            </div>
+            <div class="ip-security-component ip-security-wrap">
+              <a
+                href="./pages/ip_security.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ip-security"
+                >IP보안</a
+              ><input
+                type="checkbox"
+                id="ip-security-toggle"
+                class="ip-security-toggle"
+                name="ip-security-toggle"
+              />
+              <label
+                for="ip-security-toggle"
+                class="ip-security-toggle-label sr-only"
+                >IP보안</label
+              >
+            </div>
           </div>
         </form>
       </main>

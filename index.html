@@ -63,6 +63,22 @@
         transition: color 0.3s ease;
       }
 
+      .homework-links li:nth-last-child(3),
+      .homework-links li:nth-last-child(2),
+      .homework-links li:last-child {
+        font-weight: bolder;
+        animation: showing 1.5s linear infinite alternate;
+      }
+
+      @keyframes showing {
+        from {
+          transform: scale(1.2) rotate(15deg);
+        }
+        to {
+          transform: scale(1) rotate(-15deg);
+        }
+      }
+
       .homework-links a:hover {
         color: #007bff;
       }
@@ -91,8 +107,12 @@
         <li><a href="./src/md/retrospect.md">1, 2주차 회고</a></li>
         <li><a href="./src/avatars/avatars.html">아바타(table)</a></li>
         <li><a href="./src/avatars/avatars_li.html">아바타(ul)</a></li>
-        <li><a href="./src/md/retrospect.md">3주차 회고</a></li>
+        <li><a href="./src/avatars/avatars.md">3주차 회고</a></li>
         <li><a href="./src/login/login.html">로그인</a></li>
+        <li>
+          <a href="./src/login/components/component_login.html">컴포넌트</a>
+        </li>
+        <li><a href="./src/login/login.md">4주차 회고</a></li>
       </ul>
     </div>
   </body>

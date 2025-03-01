@@ -19,4 +19,6 @@
 
 - [login.html](./src/login/login.html)
 - [login.css](./src/login/styles/login.css)
+- [component_login.html](./src/login/components/component_login.html)
+- [component_login.css](./src/login/components/component_login.css)
 - [회고 4주차](./src/login/login.md)

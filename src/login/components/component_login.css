@@ -1,0 +1,163 @@
+@import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+:root {
+  /* color */
+  --black: #121212;
+  --white: #fff;
+  --gray-border: #dadada;
+  --gray-background: #e9f0fd;
+  --gray-off: #999999;
+  --focus: #24388d;
+  --primary: #03cf5d;
+  --error: #ff1414;
+
+  /* font size */
+  --font-size12: 0.75rem;
+  --font-size14: 0.875rem;
+  --font-size16: 1rem;
+
+  /* length */
+  --length24: 1.5rem;
+  --length45: 2.8125rem;
+
+  /* gap */
+  --gap5: 0.3125rem;
+  --gap6: 0.375rem;
+  --gap8: 0.5rem;
+  --gap14: 0.875rem;
+
+  /* weight */
+  --weight1: 0.0625rem;
+
+  /* radius */
+  --radius4: 0.25rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.logo {
+  margin: 0;
+  text-align: center;
+  font-size: 0;
+  .logo-link {
+    display: inline-block;
+    outline-color: var(--focus);
+  }
+}
+
+.email,
+.password {
+  inline-size: 100%;
+  padding: var(--gap14);
+  font-size: var(--font-size14);
+  block-size: var(--length45);
+  border: var(--weight1) solid var(--gray-border);
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: var(--radius4);
+  outline: 0;
+  &:focus {
+    border-color: var(--primary);
+    background-color: var(--gray-background);
+  }
+  &:user-invalid {
+    border-color: var(--error);
+  }
+}
+
+.email-error,
+.password-error {
+  color: var(--error);
+  font-size: var(--font-size12);
+  display: none;
+}
+
+.email:user-invalid + .email-error,
+.password:user-invalid + .password-error {
+  display: block;
+}
+
+.login-button {
+  font-size: var(--font-size16);
+  block-size: var(--length45);
+  border-radius: var(--radius4);
+  font-family: "Spoqa Han Sans Neo", sans-serif;
+  inline-size: 100%;
+  color: var(--white);
+  background-color: var(--primary);
+  border: 0;
+  outline-color: var(--focus);
+}
+
+.stay-login-component {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: var(--gap5);
+  align-items: center;
+}
+
+.stay-login {
+  appearance: none;
+  margin: 0;
+  block-size: var(--length24);
+  inline-size: var(--length24);
+  background-size: contain;
+  background-image: url(../assets/unchecked.svg);
+  background-repeat: no-repeat;
+  outline-color: var(--focus);
+}
+
+.stay-login-label {
+  font-size: var(--font-size16);
+  font-family: "Spoqa Han Sans Neo", sans-serif;
+  line-height: 100%;
+}
+
+.stay-login:checked {
+  background-image: url(../assets/checked.svg);
+}
+.ip-security-component {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: var(--gap8);
+  align-items: center;
+}
+
+.ip-security {
+  text-decoration: none;
+  font-family: "Spoqa Han Sans Neo", sans-serif;
+  color: var(--black);
+  font-size: var(--font-size16);
+  outline-color: var(--focus);
+}
+
+.ip-security-toggle {
+  appearance: none;
+  margin: 0;
+  outline-color: var(--focus);
+}
+
+.ip-security-toggle::before {
+  content: "OFF";
+  font-family: "Spoqa Han Sans Neo", sans-serif;
+  color: var(--gray-off);
+  font-size: var(--font-size16);
+}
+
+.ip-security-toggle:checked::before {
+  content: "ON";
+  font-family: "Spoqa Han Sans Neo", sans-serif;
+  padding-inline-end: var(--gap6);
+  color: var(--primary);
+  font-size: var(--font-size16);
+}

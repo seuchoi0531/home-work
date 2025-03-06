@@ -2,10 +2,25 @@
 
 **13기 최승균**
 
-## 1~2주차 마크다운
+## 5주차 애플
 
-- [마크다운 문법](./src/md/markdown.md)
-- [회고 1~2주차](./src/md/retrospect.md)
+- [apple.html](./src/apple/apple.html)
+- [apple.css](./src/apple/styles/apple.css)
+- [card-component.html](./src/apple/card-component.html)
+- [card0component.css](./src/apple/styles/card-component.css)
+- [회고 5주차](./src/apple/apple.md)
+
+---
+
+## 4주차 로그인
+
+- [login.html](./src/login/login.html)
+- [login.css](./src/login/styles/login.css)
+- [component_login.html](./src/login/components/component_login.html)
+- [component_login.css](./src/login/components/component_login.css)
+- [회고 4주차](./src/login/login.md)
+
+---
 
 ## 3주차 아바타
 
@@ -15,10 +30,9 @@
 - [avatars_li.css](./src/avatars/styles/avatars_li.css)
 - [회고 3주차](./src/avatars/avatars.md)
 
-## 4주차 로그인
+---
 
-- [login.html](./src/login/login.html)
-- [login.css](./src/login/styles/login.css)
-- [component_login.html](./src/login/components/component_login.html)
-- [component_login.css](./src/login/components/component_login.css)
-- [회고 4주차](./src/login/login.md)
+## 1~2주차 마크다운
+
+- [마크다운 문법](./src/md/markdown.md)
+- [회고 1~2주차](./src/md/retrospect.md)

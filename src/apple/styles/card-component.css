@@ -2,6 +2,12 @@
 @import "./theme.css";
 @import "./base.css";
 
+@import url("https://cdn.jsdelivr.net/gh/sahibjotsaggu/SF-Font@latest/SFPro.css");
+
+body {
+  font-family: "SF Pro Display", sans-serif;
+}
+
 .button-component {
   .button {
     outline: 0;
@@ -16,7 +22,7 @@
         0 0 0 3px var(--white),
         0 0 0 5px var(--blue-300);
     }
-    @media (min-width: 64rem) {
+    @media (min-width: 1024px) {
       font-size: var(--xx-small-text);
     }
   }
@@ -24,15 +30,6 @@
     color: var(--white);
     background: var(--blue-300);
     border: 1px solid #0000;
-    /* &:hover {
-      background: var(--blue-200);
-    }
-    &:focus {
-      background: var(--blue-200);
-    }
-    &:active {
-      background: var(--blue-400);
-    } */
   }
   .button.black.bg-empty {
     color: var(--blue-300);
@@ -42,18 +39,6 @@
     &:focus {
       color: var(--white);
     }
-    /* &:hover {
-      color: var(--white);
-      background: var(--blue-200);
-    }
-    &:focus {
-      color: var(--white);
-      background: var(--blue-200);
-    }
-    &:active {
-      color: var(--white);
-      background: var(--blue-400);
-    } */
   }
   .button.black {
     &:hover {
@@ -70,15 +55,6 @@
     color: var(--white);
     background: var(--black-300);
     border: 1px solid #0000;
-    /* &:hover {
-      background: var(--black-200);
-    }
-    &:focus {
-      background: var(--black-200);
-    }
-    &:active {
-      background: var(--black-400);
-    } */
   }
   .button.white.bg-empty {
     color: var(--black-300);
@@ -88,17 +64,6 @@
     &:focus {
       color: var(--white);
     }
-    /* &:hover {
-      color: var(--white);
-      background: var(--black-200);
-    }
-    &:focus {
-      color: var(--white);
-      background: var(--black-200);
-    }
-    &:active {
-      background: var(--black-400);
-    } */
   }
   .button.white {
     &:hover {
@@ -112,19 +77,30 @@
     }
   }
 }
-
 .card-component {
-  background-color: #fff;
+  display: grid;
   background-repeat: no-repeat;
   background-position-x: 50%;
+  background-position-y: 0;
   background-size: cover;
-  object-fit: cover;
+  .card-link,
+  .card-content-wrap {
+    grid-area: 1 / 1;
+  }
+  .card-content-wrap {
+    pointer-events: none;
+    .button {
+      pointer-events: auto;
+    }
+  }
+}
+.card-content-wrap {
   color: var(--black-300);
   block-size: var(--size);
   inline-size: 100%;
   padding-block-start: var(--large-spacing);
   gap: var(--small-spacing);
-  @media (min-width: 64rem) {
+  @media (min-width: 1024px) {
     padding-block-start: var(--extra-large-spacing);
   }
   display: flex;
@@ -136,21 +112,24 @@
   .card-title {
     font-size: var(--large-text);
     font-weight: 600;
-    @media (max-width: 64rem) {
+    @media (min-width: 1024px) {
       font-size: var(--extra-large-text);
     }
   }
   .card-subtitle {
     text-align: center;
-    /* line-height: var(--line-normal); */
     font-size: var(--medium-text);
-    @media (max-width: 64rem) {
+    @media (min-width: 1024px) {
       font-size: var(--medium-text);
+      br {
+        display: none;
+      }
     }
   }
   .card-remark {
     margin-block-start: var(--x-small-spacing);
     font-size: var(--small-text);
+    color: var(--gray);
   }
   .card-button-wrap {
     display: flex;
@@ -159,7 +138,38 @@
     justify-content: center;
   }
 }
-.card-component.black {
-  /* background-color: #000; */
+.card-component.black .card-content-wrap {
   color: var(--white);
+}
+
+/* 헤더 */
+.header-item-link {
+  padding-inline: 1em;
+  inline-size: 2em;
+  @media (min-width: 834px) {
+    padding-inline: 0.5em;
+    inline-size: auto;
+  }
+  .header-item-content {
+    /* line-height: 1.1; */
+    font-size: 0.75rem;
+  }
+}
+
+.header {
+  block-size: 3em;
+  background-color: rgb(250, 250, 252, 0.8);
+
+  @media (min-width: 834px) {
+    block-size: 2.75em;
+  }
+  .header-list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    /* .header-item {
+      display: contents;
+    } */
+  }
 }

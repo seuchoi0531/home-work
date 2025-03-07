@@ -45,10 +45,13 @@ body::before {
     }
     @media (min-width: 64rem) {
       background-image: url(../products/ipad_pro_wide.jpeg);
+      @media (min-resolution: 2dppx) {
+        background-image: url(../products/ipad_pro_wide_2x.jpeg);
+      }
     }
-    @media (min-width: 64rem) and (min-resolution: 2dppx) {
+    /* @media (min-width: 64rem) and (min-resolution: 2dppx) {
       background-image: url(../products/ipad_pro_wide_2x.jpeg);
-    }
+    } */
   }
   .product2 {
     background-image: url(../products/ipad_air.jpeg);
@@ -97,5 +100,22 @@ body::before {
     @media (min-resolution: 2dppx) {
       background-image: url(../products/airpods_pro_2x.jpeg);
     }
+  }
+}
+
+/* 헤더 */
+.logo {
+  flex-grow: 1;
+  @media (min-width: 834px) {
+    flex-grow: 0;
+  }
+}
+.essential {
+  order: 1;
+}
+.menu-content {
+  display: none;
+  @media (min-width: 834px) {
+    display: block;
   }
 }

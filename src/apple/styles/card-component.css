@@ -116,7 +116,7 @@ body {
   }
   .card-subtitle {
     text-align: center;
-    font-size: var(--medium-text);
+    font-size: var(--base-text);
     @media (min-width: 1024px) {
       font-size: var(--medium-text);
       br {

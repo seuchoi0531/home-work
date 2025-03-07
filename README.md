@@ -7,7 +7,7 @@
 - [apple.html](./src/apple/apple.html)
 - [apple.css](./src/apple/styles/apple.css)
 - [card-component.html](./src/apple/card-component.html)
-- [card0component.css](./src/apple/styles/card-component.css)
+- [card-component.css](./src/apple/styles/card-component.css)
 - [회고 5주차](./src/apple/apple.md)
 
 ---
